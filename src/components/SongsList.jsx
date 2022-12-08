@@ -12,6 +12,7 @@ const SongsList = ({ songs, isPlaying, activeSong, data }) => {
           activeSong={activeSong}
           data={data}
           i={i}
+          id={song?.artists ? song?.artists[0]?.adamid : ""}
         />
       ))}
     </div>

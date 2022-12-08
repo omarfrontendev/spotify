@@ -4,7 +4,7 @@ import PlayPause from "./PlayPause";
 import { playPause, setActiveSong } from "../redux/features/playerSlice";
 import { useDispatch } from "react-redux";
 
-const SongCard = ({ song, isPlaying, activeSong, data, i }) => {
+const SongCard = ({ song, isPlaying, activeSong, data, i, id }) => {
   const dispatch = useDispatch();
 
   const handlePauseClick = () => {
@@ -46,7 +46,7 @@ const SongCard = ({ song, isPlaying, activeSong, data, i }) => {
           {song.title}
         </Link>
         <Link
-          to={`/artists/${song?.artists[0]?.adamid}` || "/"}
+          to={`/artists/${id}` || "/"}
           className="text-sm text-gray-300 w-[250px] max-w-full truncate"
         >
           {song.subtitle}
